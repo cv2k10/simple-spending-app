@@ -1,0 +1,23 @@
+<div class="m-4 bg-blue-200 p-4 text-gray-700">
+<% if(locals.spending) { %> 
+  <h2 class="text-bold">
+    You have successully record the following spending
+  </h2>
+  <ul>
+    <p>Place: <%= spending.place %></p>
+    <p>Amount: <%= spending.amount %></p>
+    <p>User: <%= spending.user.fullname %></p>  
+  </ul>
+<% } else {%> 
+  <p class="text-red-800">No item is recorded</p>  
+<% } %>
+</div>
+<div>
+  <p class="m-4 mb-0">
+    Go to <a class="text-green-500" href="/">user registration</a>
+  </p>  
+  <p class="m-4 mt-0">
+    Go to <a class="text-green-500" href="/spending">record spending</a>
+  </p>  
+</div>
+ 

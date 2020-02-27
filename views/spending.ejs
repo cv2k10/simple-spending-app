@@ -1,0 +1,29 @@
+<div class="bg-gray-300 text-gray-800 p-4 w-full">
+  <h2 class="text-bold m-4">Spending Entry</h2>
+  <form class="m-4" method="post" action="/postSpending">
+    <div class="my-4">
+      <label for="place" class="inline-block" style="min-width: 25%">Place:</label>
+      <input type="text" name="place" class="rounded" />      
+    </div>
+    <div class="my-4">
+      <label for="amount" class="inline-block" style="min-width: 25%">Amount:</label>
+      <input type="number" name="amount" class="rounded" />      
+    </div class="my-4">
+    <div>
+      <label for="user" class="inline-block" style="min-width: 25%">User:</label>
+      <select name="userid">
+      <% if(locals.users) users.forEach( user => { %>
+        <option class="inline-block" style="min-width: 50%" value="<%= user.id %>"><%= user.fullname %></option>
+      <% }) %>
+      </select>
+    </div>
+    <divclass="my-4">
+      <input type="submit" value="Record item" class="bg-blue-500 text-gray-300 px-4 py-2 m-4 rounded shadow" />      
+    </div>    
+  </form>
+  
+    <p class="m-4">
+    Go to <a class="text-green-500" href="/">user registration</a>
+  </p>
+  
+</div>
