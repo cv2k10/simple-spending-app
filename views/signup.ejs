@@ -1,0 +1,23 @@
+<div class="container bg-gray-300 text-gray-800 p-4 w-full">
+  <h2 class="text-bold m-4">Sign-up User</h2>
+  <form class="m-4" method="post" action="/postUser">
+    <div class="my-4">
+      <label for="fullname" class="inline-block" style="min-width: 25%">Full Name:</label>
+      <input type="text" name="fullname" class="rounded" required />      
+    </div>
+    <div class="my-4">
+      <label for="username" class="inline-block" style="min-width: 25%">User Name:</label>
+      <input type="text" name="username" class="rounded" required />      
+    </div class="my-4">
+    <div>
+      <label for="password" class="inline-block" style="min-width: 25%">Password:</label>
+      <input type="text" name="password" class="rounded" required />      
+    </div>
+    <divclass="my-4">
+      <input type="submit" value="signup" class="bg-blue-500 text-gray-300 px-4 py-2 m-4 rounded shadow" />      
+    </div>    
+  </form>
+  <p class="m-4">
+    Go to <a class="text-green-500" href="/spending">record spending</a>
+  </p>
+</div>
