@@ -5,4 +5,4 @@ For user registration:
 https://spending-app.glitch.me/signup
 
 For spending record:
-https://spending-app.glitch.me/postSpending
+https://spending-app.glitch.me/spending
