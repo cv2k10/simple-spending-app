@@ -17,3 +17,11 @@ exports.postUser = (req, res) => {
   });                        
   
 };
+
+exports.showUser = (req, res) => {
+  User.findOne({_id: req.params.id})
+  .then((user) => {
+    res.render('showUser', {user});
+  })
+  .catch((err) => console.error(err))
+}

@@ -32,6 +32,7 @@ app.get("/spending", spendingController.spending);
 app.post("/postSpending", spendingController.postSpending);
 
 app.get("/allList", spendingController.allList);
+app.get("/showUser/:id", userController.showUser);
 
 // listen for requests :)
 db.once("open", () => {

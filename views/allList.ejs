@@ -2,14 +2,14 @@
                     <!--Table Card-->
                     <div class="bg-white border-transparent rounded-lg shadow-lg">
                         <div class="bg-gray-400 border-b-2 border-gray-500 rounded-tl-lg rounded-tr-lg p-2">
-                            <h5 class="font-bold uppercase text-gray-600">Records</h5>
+                            <h5 class="font-bold uppercase text-gray-600">Weapon Spending Records</h5>
                         </div>
                         <div class="p-5">
                             <table class="w-full p-5 text-gray-700">
                                 <thead>
                                     <tr class="w-full">
                                         <th class="text-left text-blue-900 inline-block w-2/12">No</th>
-                                        <th class="text-left text-blue-900 inline-block w-2/12">Place</th>
+                                        <th class="text-left text-blue-900 inline-block w-4/12">Place</th>
                                         <th class="text-left text-blue-900 inline-block w-2/12">Amt</th>
                                         <th class="text-left text-blue-900 inline-block w-4/12">User</th>
                                     </tr>
@@ -19,9 +19,9 @@
                                   <% sp.forEach((s,i) => { %>
                                     <tr>
                                         <td class="inline-block w-2/12"><%= i+1 %></td>
-                                        <td class="inline-block w-2/12"><%= s.place %></td>
+                                        <td class="inline-block w-4/12"><%= s.place %></td>
                                         <td class="inline-block w-2/12"><%= s.amount %></td>
-                                        <td class="inline-block w-4/12"><%= s.user.fullname %></td>
+                                        <td class="inline-block w-4/12"><a href="/showUser/<%= s.user.id %>" class="underline"><%= s.user.fullname %></a></td>
                                     </tr>                                  
                                   <% }); %> 
                                 </tbody>
